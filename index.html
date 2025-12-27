@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Tanisha 💖</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffd1dc, #fff0f5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Comic Sans MS', cursive;
+  overflow: hidden;
+}
+
+.card {
+  background: white;
+  border-radius: 30px;
+  padding: 35px;
+  width: 90%;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  animation: pop 1s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+h1 {
+  color: #ff4d88;
+}
+
+p {
+  color: #555;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  border-radius: 25px;
+  padding: 12px 22px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+#yes {
+  background: #ff4d88;
+  color: white;
+}
+
+#no {
+  background: #ffd6e8;
+  color: #ff4d88;
+  position: absolute;
+}
+
+#msg {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #ff4d88;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h1>Hey Tanisha 🥺💗</h1>
+
+  <p>
+    From the first day I met you,<br>
+    my heart knew something special 💕<br><br>
+    Tumi jokhon haso,<br>
+    amar pura duniya bright hoye jay 🌸
+  </p>
+
+  <p>
+    You are my favorite thought,<br>
+    amar cutest feeling ever 💖
+  </p>
+
+  <h2>Will you be mine forever? 💍💞</h2>
+
+  <button id="yes" onclick="yes()">Yes 🥰</button>
+  <button id="no" onmouseover="moveNo()">No 🙈</button>
+
+  <div id="msg"></div>
+</div>
+
+<script>
+function yes() {
+  document.getElementById("msg").innerHTML =
+  "Yayyy!! 😍💞<br>Thank you baby 💖<br>I promise to keep you smiling always 🌸";
+}
+
+function moveNo() {
+  let x = Math.random() * (window.innerWidth - 120);
+  let y = Math.random() * (window.innerHeight - 60);
+  let noBtn = document.getElementById("no");
+  noBtn.style.left = x + "px";
+  noBtn.style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
